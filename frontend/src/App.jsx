@@ -4,6 +4,7 @@ import HomePage from "./pages/HomePage/HomePage";
 import AddCoursePage from "./pages/AddCoursePage/AddCoursePage";
 import CourseRecordsPage from "./pages/CourseRecordsPage/CourseRecordsPage";
 import AddRecordPage from "./pages/AddRecordPage/AddRecordPage";
+import WeeklyRecordPage from "./pages/WeeklyRecordPage/WeeklyRecordPage";
 import styles from "./App.module.css";
 
 export default function App() {
@@ -19,6 +20,7 @@ export default function App() {
             <NavLink to="/" end>
               课程列表
             </NavLink>
+            <NavLink to="/weekly">本周记录</NavLink>
             <NavLink to="/add-course">添加课程</NavLink>
           </div>
         </nav>
@@ -40,6 +42,10 @@ export default function App() {
               element={
                 <AddCoursePage courses={courses} setCourses={setCourses} />
               }
+            />
+            <Route
+              path="/weekly"
+              element={<WeeklyRecordPage courses={courses} records={records} />}
             />
             <Route
               path="/edit-course/:id"

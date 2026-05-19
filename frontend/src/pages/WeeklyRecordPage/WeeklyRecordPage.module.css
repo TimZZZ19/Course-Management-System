@@ -1,0 +1,206 @@
+.pageHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.pageHeader h2 { font-size: 1.4rem; font-weight: 600; }
+
+/* ---- Buttons (shared pattern) ---- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 18px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.btnPrimary { background: #4361ee; color: #fff; }
+.btnPrimary:hover { background: #3a56d4; }
+.btnOutline { background: #fff; color: #4361ee; border: 1.5px solid #4361ee; }
+.btnOutline:hover { background: #eef1ff; }
+.btnSm { padding: 4px 12px; font-size: 0.8rem; }
+
+/* ---- Badge ---- */
+.badge {
+  display: inline-block;
+  padding: 2px 0;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-align: center;
+  min-width: 48px;
+}
+.badgeBlue { background: #dbeafe; color: #1e40af; }
+.badgeGreen { background: #dcfce7; color: #166534; }
+
+/* ---- Week selector ---- */
+.weekSelector {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.weekBtn {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background: #fff;
+  font-size: 1.1rem;
+  color: #475569;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s;
+}
+.weekBtn:hover { background: #f1f5f9; }
+
+.weekLabel {
+  font-size: 0.95rem;
+  color: #334155;
+  font-weight: 500;
+  min-width: 180px;
+  text-align: center;
+}
+
+.todayBtn {
+  padding: 5px 14px;
+  border: 1px solid #4361ee;
+  border-radius: 6px;
+  background: #fff;
+  color: #4361ee;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s;
+  margin-left: 4px;
+}
+.todayBtn:hover { background: #eef1ff; }
+
+/* ---- Summary bar ---- */
+.summaryBar {
+  display: flex;
+  gap: 16px;
+  padding: 16px 20px;
+  background: #fff;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  border: 1px solid #e8ecf1;
+}
+.summaryItem { flex: 1; text-align: center; }
+.summaryLabel { font-size: 0.8rem; color: #94a3b8; }
+.summaryValue { font-size: 1.2rem; font-weight: 700; color: #1a1a2e; margin-top: 2px; }
+
+/* ---- Week list (vertical) ---- */
+.weekGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.dayColumn {
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #e8ecf1;
+  padding: 14px 18px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+
+.dayEmpty { background: #f8fafc; }
+
+.dayHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #f1f5f9;
+}
+.dayLabel { font-size: 0.9rem; font-weight: 700; color: #334155; }
+.dayDate { font-size: 0.8rem; color: #94a3b8; }
+
+.noRecord {
+  color: #cbd5e1;
+  font-size: 0.85rem;
+  padding: 8px 0;
+}
+
+/* ---- Column headings ---- */
+.columnHeadings {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 14px;
+  margin-bottom: 6px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #94a3b8;
+}
+
+.columnHeadings span:first-child { min-width: 48px; }
+.columnHeadings span:nth-child(2) { min-width: 80px; }
+.columnHeadings span:nth-child(3) { min-width: 40px; }
+.columnHeadings span:nth-child(4) { flex: 1; min-width: 0; }
+.columnHeadings span:nth-child(5) { flex: 1; min-width: 0; }
+.columnHeadings span:last-child { min-width: 48px; }
+
+/* ---- Record card (horizontal row) ---- */
+.recordCard {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  margin-bottom: 4px;
+  background: #fff;
+  border-radius: 6px;
+  border: 1px solid #e8ecf1;
+  font-size: 0.82rem;
+}
+
+.recordCard:hover { background: #f8fafc; }
+
+.recordCourseName {
+  font-weight: 600;
+  color: #1e293b;
+  white-space: nowrap;
+  min-width: 80px;
+}
+
+.recordDuration {
+  color: #4361ee;
+  font-weight: 700;
+  white-space: nowrap;
+  min-width: 40px;
+}
+
+.recordContent {
+  flex: 1;
+  color: #475569;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+}
+
+.recordHomework {
+  flex: 1;
+  color: #64748b;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+}
+
+/* ---- Empty state ---- */
+.emptyState { text-align: center; padding: 60px 20px; color: #94a3b8; }
+.emptyState p { font-size: 1rem; margin-top: 8px; }
